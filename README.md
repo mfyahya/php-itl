@@ -46,7 +46,7 @@ The following functions are available:
 
 ##### Description
 ```php
-mixed *itl_get_prayer_times*(double longitude, double latitude, double gmtdiff, mixed method, int day, int month, int year [, boolean dst [, double sealevel [, double pressure [, double temperature]]]])
+mixed itl_get_prayer_times(double longitude, double latitude, double gmtdiff, mixed method, int day, int month, int year [, boolean dst [, double sealevel [, double pressure [, double temperature]]]])
 ```
 
 Returns an array containing timings for the five daily prayers and shurooq
@@ -69,7 +69,7 @@ default Umm Al-Qurra method will be used.
 <tr><td> 3 </td><td> University of Islamic Sciences, Karachi (Hanafi) </td></tr>
 <tr><td> 4 </td><td> Islamic Society of North America </td></tr>
 <tr><td> 5 </td><td> Muslim World League (MWL) </td></tr>
-<tr><td> 6 </td><td> Umm Al-Qurra (Saudi Arabia </td></tr>
+<tr><td> 6 </td><td> Umm Al-Qurra (Saudi Arabia) </td></tr>
 <tr><td> 7 </td><td> Fixed Isha Interval (always 90) </td></tr>
 </table>
 
@@ -243,8 +243,9 @@ Wherever _NULL_ is used as a parameter, default values from Umm Al-Qurra method 
 *itl_get_north_qibla* -- Get Qibla direction measured from North.
 
 ##### Description
-
-double **itl_get_north_qibla**(double longitude, double latitude)
+```php
+double itl_get_north_qibla(double longitude, double latitude)
+```
 
 ##### Parameters
 * _longitude_ -- longitude in degrees (EPSG 4326)
@@ -270,7 +271,9 @@ outputs
 itl_h_date -- Convert Gregorian date to Hijri
 
 ##### Description
-array **itl_h_date**(int day, int month, int year)
+```php
+array itl_h_date(int day, int month, int year)
+```
 
 ##### Parameters
 * _day_ -- day of the month (1-31)
@@ -304,12 +307,14 @@ Array
 **itl_g_date** -- Convert Hijri date to Gregorian
 
 ##### Description
-array '''itl_g_date'''(int day, int month, int year)
+```php
+array itl_g_date(int day, int month, int year)
+```
 
 ##### Parameters
-* ''day'' -- day of the month (1-31)
-* ''month'' -- month of year (1-12)
-* ''year'' -- 4 digit year
+* _day_ -- day of the month (1-31)
+* _month_ -- month of year (1-12)
+* _year_ -- 4 digit year
 
 ##### Return values
 Array containing the day, month, year, weekday, and units (B.C. or A.D.)
